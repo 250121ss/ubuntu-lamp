@@ -1,0 +1,55 @@
+sudo apt update
+sudo apt install apache2
+sudo apt install mysql-server
+=====
+Mysql Password setup
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+flush privileges;
+exit;
+==========  
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php8.1 -y
+sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath php8.1-redis php8.1-fpm php8.1-intl php8.1-zip php8.1-soap php8.1-opcache
+===
+phpmyadmin upload size incress conf
+
+sudo vi /etc/php/8.1/apache2/php.ini
+max_execution_time = -1
+max_input_time = -1
+memory_limit = -1
+post_max_size = 10G 
+upload_max_filesize = 8G
+
+===
+sudo vi /etc/apache2/mods-enabled/dir.conf
+
+Replace index.php  , index.html
+
+==
+sudo systemctl restart php8.1-fpm.service
+sudo apt update && sudo apt install phpmyadmin php-mbstring
+sudo phpenmod mbstring
+sudo a2enmod rewrite 
+===
+conf
+sudo vi /etc/apache2/apache2.conf
+
+None -> All
+
+====
+PHP CHECK 
+
+<?php
+
+phpinfo( );
+
+?>
+===
+
+
+
+
+
+

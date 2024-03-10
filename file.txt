@@ -38,6 +38,33 @@ sudo vi /etc/apache2/apache2.conf
 
 None -> All
 
+Composer install
+sudo apt-get install composer	
+
+cd ~
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+Node 
+
+
+sudo apt -y install curl
+curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+sudo apt install nodejs
+
+===
+yarn
+
+
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
+
+npm 
+
+sudo apt install npm
+sudo npm install forever -g
+
 ====
 PHP CHECK 
 

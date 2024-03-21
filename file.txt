@@ -75,5 +75,13 @@ phpinfo( );
 ?>
 ===
 
+== PHP Version Switch Commands line ===
+
+sudo update-alternatives --config php
+
+
+
+
+
 
 

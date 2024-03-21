@@ -76,6 +76,31 @@ phpinfo( );
 ===
 
 
+--- Install Symfony Framework ---
+
+wget https://get.symfony.com/cli/installer -O - | bash
+Or
+curl -sS https://get.symfony.com/cli/installer | bash
+
+
+export PATH="$HOME/.symfony5/bin:$PATH"
+source ~/.bashrc
+
+
+symfony check:req
+
+git config --global user.email "email_address"
+git config --global user.name "full_name"
+
+
+symfony new demo --webapp
+
+
+
+cd demo
+symfony server:start
+
+
 
 
 
